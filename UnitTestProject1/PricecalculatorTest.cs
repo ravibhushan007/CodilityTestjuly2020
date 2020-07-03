@@ -33,7 +33,7 @@ namespace UnitTestProject1
         {
             Pricecalculator obj = new Pricecalculator();
             int totaolprice= obj.TotalPrice(TestInput1);
-            Assert.Equals(100, totaolprice);
+            Assert.AreEqual(100, totaolprice);
 
         }
         [TestMethod]
@@ -41,9 +41,9 @@ namespace UnitTestProject1
         {
             Pricecalculator obj = new Pricecalculator();
             int totaolprice = obj.TotalPrice(TestInput2,true, "InstantPromo");
-            Assert.Equals(370, totaolprice);
+            Assert.AreEqual(370, totaolprice);
             int totaol = obj.TotalPrice(TestInput3, true, "InstantPromo");
-            Assert.Equals(280, totaol);
+            Assert.AreEqual(280, totaol);
         }
     }
 }
