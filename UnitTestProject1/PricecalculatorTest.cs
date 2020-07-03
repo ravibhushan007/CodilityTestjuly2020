@@ -31,18 +31,16 @@ namespace UnitTestProject1
        [TestMethod]
         public void TotalPricewithoutpromo()
         {
-            Pricecalculator obj = new Pricecalculator();
-            int totaolprice= obj.TotalPrice(TestInput1);
+            int totaolprice= Pricecalculator.TotalPrice(TestInput1,false,"");
             Assert.AreEqual(100, totaolprice);
 
         }
         [TestMethod]
         public void TotalPricewithpromo()
         {
-            Pricecalculator obj = new Pricecalculator();
-            int totaolprice = obj.TotalPrice(TestInput2,true, "InstantPromo");
+            int totaolprice = Pricecalculator.TotalPrice(TestInput2,true, "InstantPromo");
             Assert.AreEqual(370, totaolprice);
-            int totaol = obj.TotalPrice(TestInput3, true, "InstantPromo");
+            int totaol = Pricecalculator.TotalPrice(TestInput3, true, "InstantPromo");
             Assert.AreEqual(280, totaol);
         }
     }
